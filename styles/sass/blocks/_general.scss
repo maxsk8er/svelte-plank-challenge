@@ -1,0 +1,127 @@
+@use 'sass:math';
+
+html {
+	scroll-behavior: smooth;
+}
+
+// TOP-MENU
+.top-line {
+	display: flex;
+	justify-content: space-between;
+	background-color: white;
+}
+
+.fixed-nav .top-line {
+	position: fixed;
+	box-shadow: 0 5px rgba(0, 0, 0, .1);
+	top: 0;
+	width: 100%;
+}
+
+.top-menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+.top-menu_li {
+	display: inline-block;
+	margin: 10px;
+}
+
+
+// BANNER
+
+.top-banner {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	background-attachment: scroll;
+	background-image: url(/images/dist/header-bg.jpg);
+	background-position: center center;
+	background-repeat: none;
+	background-size: cover;
+}
+
+.top-banner_title {
+	margin-bottom: 25px;
+	font-size: 40px;
+	font-style: italic;
+	line-height: 40px;
+	padding: 300px 0;
+}
+
+// CONTACT-BOX
+.contact-box {
+	overflow: hidden;
+	background-color: #fff6f8;
+	border-radius: 4px;
+	width: 300px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	z-index: 2;
+	color: black;
+}
+
+.contact-box_top {
+
+	flex: 1 0 auto;
+	padding: 20px;
+}
+
+.contact-box_bottom {
+	flex: 0 0 auto;
+	border: none;
+	padding: 20px;
+}
+
+.contact-box_phone {
+	margin-bottom: 5px;
+}
+
+.contact-box_mail {}
+
+.contact-box_button {
+	white-space: nowrap;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 14px;
+	background: #E5261F;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.025em;
+	color: #ffffff;
+	text-decoration: none;
+	transition: all 0.15s ease;
+}
+
+// SECTION
+
+.section {
+	display: inline-block;
+	width: 100%;
+	height: 100vh;
+}
+
+.section_header {
+	text-align: center;
+}
+
+.section_title {
+	margin-bottom: 15px;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.section_subtitle {
+	margin-bottom: 75px;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 400;
+}

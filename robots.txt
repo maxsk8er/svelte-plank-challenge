@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /index.html
+Host: svelte-plank-challenge.pt
+Sitemap: http://svelte-plank-challenge.pt/sitemap.xml

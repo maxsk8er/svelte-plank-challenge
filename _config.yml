@@ -1,0 +1,37 @@
+title: svelte-plank-challenge
+name: svelte-plank-challenge
+description: svelte-plank-challenge.
+
+themecolor: #202225
+imagehome: img/svelte-plank-challenge.jpg
+baseurl: '/'
+url: 'http://svelte-plank-challenge.pt'
+# twitter_username: jekyllrb
+# github_username:  jekyll
+
+exclude:
+  [
+    'node_modules',
+    'gulpfile.js',
+    'package.json',
+    'package-lock.json',
+    'js/common.js',
+    'js/app.js',
+    'npm-debug.log',
+    '**/Thumbs.db',
+    '**/*.sass',
+    '**/*.scss',
+    'libs',
+    'styles',
+    'images/src',
+    '_site',
+    '**/*.DS_Store',
+  ]
+
+soc: <li><a href="#"><i class="fa fa-vk"></i></a></li>
+  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+  <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
+  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+  <li><a href="rss.xml"><i class="fa fa-rss"></i></a></li>
+
+copyright: Копирование контента и размещение на других сайтах запрещено.
