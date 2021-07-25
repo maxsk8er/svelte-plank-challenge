@@ -14,6 +14,10 @@ vendor
 /dist
 /node_modules
 
+/svelte-components/node_modules/
+/svelte-components/public/build/
+
+
 # Logs
 logs
 *.log

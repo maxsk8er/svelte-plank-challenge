@@ -35,30 +35,34 @@ function browsersync() {
 }
 
 function scripts() {
-	return src(['js/*.js', '!js/*.min.js'])
-		.pipe(webpack({
-			mode: 'production',
-			performance: { hints: false },
-			module: {
-				rules: [
-					{
-						test: /\.(js)$/,
-						exclude: /(node_modules)/,
-						loader: 'babel-loader',
-						query: {
-							presets: ['@babel/env'],
-							plugins: ['babel-plugin-root-import']
-						}
-					}
-				]
-			}
-		})).on('error', function handleError() {
-			this.emit('end')
-		})
-		.pipe(rename('app.min.js'))
-		.pipe(dest('js'))
-		.pipe(dest('_site/js'))
-		.pipe(browserSync.stream())
+	// return src(['js/*.js', '!js/*.min.js'])
+	return src(['js/app.js', 'js/svelte-bundle.js'])
+    .pipe(
+      webpack({
+        mode: 'production',
+        performance: { hints: false },
+        module: {
+          rules: [
+            {
+              test: /\.(js)$/,
+              exclude: /(node_modules)/,
+              loader: 'babel-loader',
+              query: {
+                presets: ['@babel/env'],
+                plugins: ['babel-plugin-root-import'],
+              },
+            },
+          ],
+        },
+      })
+    )
+    .on('error', function handleError() {
+      this.emit('end');
+    })
+    .pipe(rename('app.min.js'))
+    .pipe(dest('js'))
+    .pipe(dest('_site/js'))
+    .pipe(browserSync.stream());
 }
 
 function styles() {

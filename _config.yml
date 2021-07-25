@@ -26,6 +26,7 @@ exclude:
     'images/src',
     '_site',
     '**/*.DS_Store',
+    'svelte-components',
   ]
 
 soc: <li><a href="#"><i class="fa fa-vk"></i></a></li>
