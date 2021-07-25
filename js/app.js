@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const links = document.querySelectorAll("a.page-scroll");
+	// const links = document.querySelectorAll("a.page-scroll");
 
-	for (const link of links) {
-		link.addEventListener("click", clickHandler);
-	}
+	// for (const link of links) {
+	// 	link.addEventListener("click", clickHandler);
+	// }
 
-	function clickHandler(e) {
-		e.preventDefault();
-		const href = this.getAttribute("href");
-		const offsetTop = document.querySelector(href).offsetTop;
+	// function clickHandler(e) {
+	// 	e.preventDefault();
+	// 	const href = this.getAttribute("href");
+	// 	const offsetTop = document.querySelector(href).offsetTop;
 
-		scroll({
-			top: offsetTop,
-			behavior: "smooth"
-		});
-	}
+	// 	scroll({
+	// 		top: offsetTop,
+	// 		behavior: "smooth"
+	// 	});
+	// }
 
 
 	// const attr = document.querySelectorAll('a[href^="#"]');
@@ -52,18 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// STICKY NAV
 
-	const nav = document.querySelector('#main');
-	const topOfNav = nav.offsetTop;
-	const fixNav = () => {
+	// const nav = document.querySelector('#main');
+	// const topOfNav = nav.offsetTop;
+	// const fixNav = () => {
 
-		if (window.scrollY >= topOfNav) {
-			document.body.style.paddingTop = nav.offsetHeight + "px";
-			document.body.classList.add('fixed-nav');
-		} else {
-			document.body.style.paddingTop = 0;
-			document.body.classList.remove('fixed-nav');
-		}
-	}
+	// 	if (window.scrollY >= topOfNav) {
+	// 		document.body.style.paddingTop = nav.offsetHeight + "px";
+	// 		document.body.classList.add('fixed-nav');
+	// 	} else {
+	// 		document.body.style.paddingTop = 0;
+	// 		document.body.classList.remove('fixed-nav');
+	// 	}
+	// }
 
-	window.addEventListener('scroll', fixNav);
+	// window.addEventListener('scroll', fixNav);
 })

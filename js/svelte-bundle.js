@@ -310,15 +310,16 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let main;
-    	let h1;
+    	let button;
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			h1 = element("h1");
-    			h1.textContent = "WORKING";
-    			attr_dev(h1, "class", "svelte-1d5uci0");
-    			add_location(h1, file, 4, 2, 29);
+    			button = element("button");
+    			button.textContent = "Start Challenge";
+    			attr_dev(button, "class", "svelte-7b4e9z");
+    			add_location(button, file, 4, 2, 29);
+    			attr_dev(main, "class", "svelte-7b4e9z");
     			add_location(main, file, 3, 0, 20);
     		},
     		l: function claim(nodes) {
@@ -326,7 +327,7 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, h1);
+    			append_dev(main, button);
     		},
     		p: noop,
     		i: noop,

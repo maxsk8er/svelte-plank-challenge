@@ -123,6 +123,7 @@ function deploy() {
 
 function startwatch() {
 	watch(`styles/${preprocessor}/**/*`, { usePolling: true }, styles)
+	watch(`js/bundle.css`, { usePolling: true }, styles);
 	watch(['js/**/*.js', '!js/**/*.min.js'], { usePolling: true }, scripts)
 	//watch('images/src/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images)
 	//watch(`**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
